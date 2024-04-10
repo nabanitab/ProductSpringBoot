@@ -2,6 +2,7 @@ package com.nabanita.TestProduct.controller;
 
 import com.nabanita.TestProduct.model.UserModel;
 import com.nabanita.TestProduct.service.IUserService;
+import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -9,6 +10,8 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+
+import static org.hibernate.sql.ast.SqlTreeCreationLogger.LOGGER;
 
 @RestController
 @RequestMapping("/users")
@@ -55,4 +58,6 @@ public class UserController {
 
         return resp;
     }
-}
+
+
+    }
